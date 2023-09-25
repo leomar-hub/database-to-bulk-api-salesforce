@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.FileOutputStream;
@@ -42,8 +43,37 @@ public class CustomerController {
     }
 
     @GetMapping(value = "/allCustomers", produces = "application/json")
-    public ResponseEntity<String> getAllEmployees() {
-        List<Customer> customers = customerRepository.findAll();
+    public ResponseEntity<String> getAllCustomers(
+            @RequestParam(value = "customerNumber", required = false) Long customerNumber,
+            @RequestParam(value = "customerName", required = false) String customerName,
+            @RequestParam(value = "contactLastName", required = false) String contactLastName,
+            @RequestParam(value = "contactFirstName", required = false) String contactFirstName,
+            @RequestParam(value = "phone", required = false) String phone,
+            @RequestParam(value = "addressLine1", required = false) String addressLine1,
+            @RequestParam(value = "addressLine2", required = false) String addressLine2,
+            @RequestParam(value = "city", required = false) String city,
+            @RequestParam(value = "state", required = false) String state,
+            @RequestParam(value = "postalCode", required = false) String postalCode,
+            @RequestParam(value = "country", required = false) String country,
+            @RequestParam(value = "salesRepEmployeeNumber", required = false) Long salesRepEmployeeNumber,
+            @RequestParam(value = "creditLimit", required = false) Double creditLimit) {
+
+        List<Customer> customers = customerRepository.findCustomersByFilters(
+                customerNumber,
+                customerName,
+                contactLastName,
+                contactFirstName,
+                phone,
+                addressLine1,
+                addressLine2,
+                city,
+                state,
+                postalCode,
+                country,
+                salesRepEmployeeNumber,
+                creditLimit
+        );
+
         try {
             String json = objectMapper.writeValueAsString(customers);
             return ResponseEntity.ok(json);
@@ -51,7 +81,6 @@ public class CustomerController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar a solicitação.");
         }
     }
-
 
     @GetMapping(value = "/customerCsv")
     public ResponseEntity<byte[]> getCustomerCsv() {
