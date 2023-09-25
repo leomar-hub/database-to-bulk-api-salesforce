@@ -132,7 +132,10 @@ public class CustomerController {
             // Configura o Content-Length com o tamanho do arquivo
             headers.setContentLength(fileBytes.length);
 
+            Files.delete(Paths.get(filePath));
+
             return new ResponseEntity<>(fileBytes, headers, HttpStatus.OK);
+
         } catch (Exception e) {
             // Lida com exceções, se necessário
             return ResponseEntity
