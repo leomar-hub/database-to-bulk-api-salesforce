@@ -1,4 +1,4 @@
-FROM openjdk:18-jre-slim
+FROM openjdk:8-jre-slim
 
 ENV PORT=8080
 
