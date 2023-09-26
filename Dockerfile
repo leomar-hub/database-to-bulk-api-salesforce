@@ -1,6 +1,6 @@
 FROM openjdk:18-jdk
 
-#definindo a porta
+#definindo porta
 ENV PORT=8080
 
 WORKDIR /app
