@@ -1,5 +1,5 @@
 # Use a imagem base oficial do OpenJDK
-FROM openjdk:11-jre-slim
+FROM openjdk:8-jre-slim
 
 # Define o diretório de trabalho no contêiner como /app
 WORKDIR /app
