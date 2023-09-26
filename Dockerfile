@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM openjdk:18
 
 #definindo a porta
 ENV PORT=8080
