@@ -1,5 +1,6 @@
 FROM openjdk:8-jre-slim
 
+#definindo a porta
 ENV PORT=8080
 
 WORKDIR /app
