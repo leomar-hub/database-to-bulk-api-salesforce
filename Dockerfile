@@ -4,7 +4,7 @@ FROM openjdk:8-jre-slim
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copia o arquivo JAR do seu projeto para o diretório de trabalho no contêiner
+# Copia o arquivo JAR do seu projeto para o diretório de trabalho no conteiner
 COPY out/artifacts/demoIntegracaoMysqlSalesforce_jar/demoIntegracaoMysqlSalesforce.jar /app/demoIntegracaoMysqlSalesforce.jar
 
 # Comando para executar o aplicativo Java quando o contêiner for iniciado
