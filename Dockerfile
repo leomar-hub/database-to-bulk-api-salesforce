@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY out/artifacts/demoIntegracaoMysqlSalesforce_jar/demoIntegracaoMysqlSalesforce.jar /app/demoIntegracaoMysqlSalesforce.jar
 
-EXPOSE ${PORT}
+EXPOSE $PORT
 
-CMD ["java", "-jar", "-Dserver.port=${PORT}", "demoIntegracaoMysqlSalesforce.jar"]
+CMD ["java", "-jar", "-Dserver.port=$PORT", "demoIntegracaoMysqlSalesforce.jar"]
