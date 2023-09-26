@@ -1,14 +1,11 @@
-# Use a imagem base oficial do OpenJDK
+# Use a imagem base do OpenJDK 11 (ou a versão que você precisa)
 FROM openjdk:8-jre-slim
 
-# Define o diretório de trabalho no contêiner como /app
+# Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copia o arquivo JAR da sua aplicação para o contêiner e renomeia para app.jar
-COPY target/demo-integracao-mysql-salesforce.jar app.jar
+# Copie o arquivo JAR do seu projeto para o diretório de trabalho no contêiner
+COPY out/artifacts/demoIntegracaoMysqlSalesforce/demoIntegracaoMysqlSalesforce.jar /app/demoIntegracaoMysqlSalesforce.jar
 
-# Expõe a porta 8080, que é a porta padrão para aplicativos Spring Boot
-EXPOSE 8080
-
-# Define o comando de entrada para iniciar o aplicativo Spring Boot com java -jar app.jar
-CMD ["java", "-jar", "app.jar"]
+# Comando para executar o aplicativo Java quando o contêiner for iniciado
+CMD ["java", "-jar", "demoIntegracaoMysqlSalesforce.jar"]
