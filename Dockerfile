@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY out/artifacts/demoIntegracaoMysqlSalesforce_jar/spring-boot-mf-0.0.1-SNAPSHOT.jar /app/spring-boot-mf-0.0.1-SNAPSHOT.jar
 
-EXPOSE $PORT
+EXPOSE 8090
 
-CMD ["java", "-jar", "-Dserver.port=$PORT", "spring-boot-mf-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "-Dserver.port=8090", "spring-boot-mf-0.0.1-SNAPSHOT.jar"]
 
