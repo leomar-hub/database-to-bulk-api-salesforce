@@ -5,7 +5,7 @@ ENV PORT=8090
 
 WORKDIR /app
 
-COPY spring-boot-mf-0.0.1-SNAPSHOT.jar /app/spring-boot-mf-0.0.1-SNAPSHOT.jar
+COPY /out/artifacts/demoIntegracaoMysqlSalesforce_jar/spring-boot-mf-0.0.1-SNAPSHOT.jar /app/spring-boot-mf-0.0.1-SNAPSHOT.jar
 
 EXPOSE $PORT
 
