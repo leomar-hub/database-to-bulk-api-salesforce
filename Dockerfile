@@ -1,6 +1,6 @@
 FROM openjdk:18-jdk
 
-#definindo porta
+#definindo a porta
 ENV PORT=8090
 
 WORKDIR /app
