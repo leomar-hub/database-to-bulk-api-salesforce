@@ -89,7 +89,7 @@ public class CustomerController {
         try {
             // Configura o CSVFormat com as colunas necessárias
             CSVFormat csvFormat = CSVFormat.DEFAULT
-                    .withHeader("AccountNumber", "Name", "FirstName__c", "Phone");
+                    .withHeader("AccountNumber", "Name", "FirstName__c", "LastName__c", "Phone");
 
             // Crie um StringWriter para escrever o CSV
             StringWriter stringWriter = new StringWriter();
@@ -97,8 +97,12 @@ public class CustomerController {
 
             // Escreve os dados dos clientes no CSV
             for (Customer customer : customers) {
+
+                String fullName = customer.getContactFirstName() + " " + customer.getContactLastName();
+
                 csvPrinter.printRecord(
                         customer.getCustomerNumber(),
+                        fullName,
                         customer.getContactLastName(),
                         customer.getContactFirstName(),
                         customer.getPhone()
@@ -132,7 +136,7 @@ public class CustomerController {
             // Configura o Content-Length com o tamanho do arquivo
             headers.setContentLength(fileBytes.length);
 
-            Files.delete(Paths.get(filePath));
+            //Files.delete(Paths.get(filePath));
 
             return new ResponseEntity<>(fileBytes, headers, HttpStatus.OK);
 
