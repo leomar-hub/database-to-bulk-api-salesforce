@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.FileOutputStream;
 import java.io.StringWriter;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -87,6 +88,16 @@ public class CustomerController {
         List<Customer> customers = customerRepository.findAll();
 
         try {
+
+            // Caminho do diretório de saída
+            String directoryPath = "src/csv";
+
+            // Verifique se o diretório existe; se não, crie-o
+            Path directory = Paths.get(directoryPath);
+            if (!Files.exists(directory)) {
+                Files.createDirectories(directory);
+            }
+
             // Configura o CSVFormat com as colunas necessárias
             CSVFormat csvFormat = CSVFormat.DEFAULT
                     .withHeader("AccountNumber", "Name", "FirstName__c", "LastName__c", "Phone");
