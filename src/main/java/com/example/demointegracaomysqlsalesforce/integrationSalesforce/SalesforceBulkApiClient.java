@@ -33,7 +33,7 @@ public class SalesforceBulkApiClient {
     private static final String CLIENT_ID = "3MVG9JEx.BE6yifN89QdxTc9u0ug1KiCMfb1zq41FcEV6QOBJ.7CQnmqU3P14lyRILkhseg5SRQlOYMlhPqZw";
     private static final String CLIENT_SECRET = "37276876542DF88E14FF280196CF036EBD2200E4B72A9A270AF83856358F2033";
     private static final String USERNAME = "sergio_leomar@hotmail.com";
-    private static final String PASSWORD = ${{secrets.PASSWORD}};
+    private static final String PASSWORD = "${{secrets.PASSWORD}}";
 
     private String accessToken;
     private String jobResponse;
