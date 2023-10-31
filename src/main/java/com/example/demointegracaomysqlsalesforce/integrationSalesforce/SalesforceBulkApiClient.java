@@ -30,9 +30,9 @@ public class SalesforceBulkApiClient {
 
     private static final String SALESFORCE_LOGIN_URL = "https://login.salesforce.com/services/oauth2/token";
     private static final String SALESFORCE_API_ENDPOINT = "https://estudante18-dev-ed.my.salesforce.com/services/data/v57.0/jobs/ingest";
-    private static final String CLIENT_ID = "3MVG9JEx.BE6yifN89QdxTc9u0ug1KiCMfb1zq41FcEV6QOBJ.7CQnmqU3P14lyRILkhseg5SRQlOYMlhPqZw";
-    private static final String CLIENT_SECRET = "37276876542DF88E14FF280196CF036EBD2200E4B72A9A270AF83856358F2033";
-    private static final String USERNAME = "sergio_leomar@hotmail.com";
+    private static final String CLIENT_ID = "${{secrets.CLIENT_ID}}";
+    private static final String CLIENT_SECRET = "${{secrets.CLIENT_SECRET}}";
+    private static final String USERNAME = "${{secrets.USERNAME}}";
     private static final String PASSWORD = "${{secrets.PASSWORD}}";
 
     private String accessToken;
