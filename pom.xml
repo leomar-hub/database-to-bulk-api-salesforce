@@ -138,20 +138,25 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+
+
+            <!-- Este plugin permite personalizar o diretório para gerar o .JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <outputDirectory>out/artifacts/demoIntegracaoMysqlSalesforce_jar</outputDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
-
 
 </project>
