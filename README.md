@@ -1,4 +1,4 @@
-# database-to-bulk-api-salesforce
+# Database-to-bulk-api-salesforce
 
  Projeto "Database-to-Bulk-API Salesforce" tem como objetivo desenvolver uma solução eficiente e automatizada para a integração de um banco de dados com a plataforma Salesforce, utilizando a funcionalidade Bulk API oferecida pela Salesforce. Esta integração permitirá o acesso e a transferência de dados em larga escala entre um banco de dados local ou remoto e o ambiente Salesforce, otimizando o processo de importação, exportação e sincronização de informações.
 
