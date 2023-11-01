@@ -18,12 +18,12 @@ jobs:
 
     steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16  # Defina a versão do Node.js para 16
 
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Copy from master to main
         run: |
