@@ -10,10 +10,8 @@ Mapeamento de Dados: Oferecerá a capacidade de mapear campos entre o banco de d
 
 Opções de Filtro: Disponibilizará opções avançadas de filtro para selecionar os registros a serem transferidos com base em critérios específicos.
 
-Agendamento de Tarefas: Possibilitará agendar tarefas de importação/exportação para execução automática em horários pré-definidos.
+Agendamento de Tarefas: Possibilitará a exportação automática dos dados da base de dados.
 
 Monitoramento e Relatórios: Fornecerá um painel de controle para monitorar o status das tarefas, o histórico de transferências e relatórios detalhados sobre o desempenho do processo.
-
-Gerenciamento de Erros: Lidará de forma eficiente com erros e exceções durante o processo de transferência, oferecendo ferramentas para resolução e notificação.
 
 Ao implementar o "Database-to-Bulk-API Salesforce," os usuários poderão economizar tempo e recursos, garantindo uma integração confiável e escalável entre seus sistemas de banco de dados e o Salesforce. Isso será particularmente valioso para empresas que dependem do Salesforce como plataforma de gerenciamento de relacionamento com o cliente (CRM) e desejam manter seus dados atualizados e precisos.
