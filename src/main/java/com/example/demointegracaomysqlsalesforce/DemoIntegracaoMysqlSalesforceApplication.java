@@ -31,5 +31,11 @@ public class DemoIntegracaoMysqlSalesforceApplication {
     "senha": "test123"
     */
 
+    /*
+    Usuário master do banco
+    "login": "testdigibee",
+    "senha": "digibee123"
+    */
+
 }
 
