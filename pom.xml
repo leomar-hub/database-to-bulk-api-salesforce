@@ -138,6 +138,7 @@
 
     <build>
         <plugins>
+            <!-- Plugin sendo usado para personalizar o diretório do .JAR gerado (src/out) -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
